@@ -1,0 +1,58 @@
+2020-03-14 15:14:57.712  INFO 4522 --- [restartedMain] com.linyue.BlogApplication               : Starting BlogApplication on linyuedeMacBook-Pro.local with PID 4522 (/Users/hayashietsu/Desktop/blog/target/classes started by hayashietsu in /Users/hayashietsu/Desktop/blog)
+2020-03-14 15:14:57.719 DEBUG 4522 --- [restartedMain] com.linyue.BlogApplication               : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-03-14 15:14:57.721  INFO 4522 --- [restartedMain] com.linyue.BlogApplication               : The following profiles are active: dev
+2020-03-14 15:14:57.851  INFO 4522 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/hayashietsu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-03-14 15:14:57.851  INFO 4522 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-14 15:14:57.851  INFO 4522 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-14 15:14:58.533  INFO 4522 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-14 15:14:58.622  INFO 4522 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 5 JPA repository interfaces.
+2020-03-14 15:14:58.962  INFO 4522 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-14 15:14:59.527  INFO 4522 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-14 15:14:59.540  INFO 4522 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-14 15:14:59.541  INFO 4522 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-14 15:14:59.640  INFO 4522 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-14 15:14:59.641  INFO 4522 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1789 ms
+2020-03-14 15:14:59.935  INFO 4522 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-14 15:15:00.063  INFO 4522 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-03-14 15:15:00.297  INFO 4522 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-14 15:15:00.450  INFO 4522 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-14 15:15:00.840  INFO 4522 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-14 15:15:00.866  INFO 4522 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-03-14 15:15:01.956  INFO 4522 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-14 15:15:01.966  INFO 4522 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-14 15:15:02.029  INFO 4522 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-14 15:15:02.835  WARN 4522 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-14 15:15:03.203  INFO 4522 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-14 15:15:03.313  INFO 4522 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-14 15:15:03.661  INFO 4522 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-14 15:15:03.664  INFO 4522 --- [restartedMain] com.linyue.BlogApplication               : Started BlogApplication in 6.959 seconds (JVM running for 8.12)
+2020-03-14 15:15:17.370  INFO 4522 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-14 15:15:17.371  INFO 4522 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-14 15:15:17.383  INFO 4522 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-03-14 15:15:17.419  INFO 4522 --- [http-nio-8080-exec-1] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.index', args='[Ljava.lang.Object;@5aa88fc3'}
+2020-03-14 15:15:17.536  WARN 4522 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-03-14 15:15:17.554  INFO 4522 --- [http-nio-8080-exec-1] com.linyue.aspect.LogAspect              : -----------result:++index-------
+2020-03-14 15:15:21.264  INFO 4522 --- [http-nio-8080-exec-3] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.newblogs', args='[Ljava.lang.Object;@6e9860fd'}
+2020-03-14 15:15:21.271  INFO 4522 --- [http-nio-8080-exec-3] com.linyue.aspect.LogAspect              : -----------result:++_fragments :: newblogList-------
+2020-03-14 15:16:02.311  INFO 4522 --- [http-nio-8080-exec-9] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.index', args='[Ljava.lang.Object;@19c6528a'}
+2020-03-14 15:16:02.324  INFO 4522 --- [http-nio-8080-exec-9] com.linyue.aspect.LogAspect              : -----------result:++index-------
+2020-03-14 15:16:08.699  INFO 4522 --- [http-nio-8080-exec-1] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.newblogs', args='[Ljava.lang.Object;@75130bf7'}
+2020-03-14 15:16:08.710  INFO 4522 --- [http-nio-8080-exec-1] com.linyue.aspect.LogAspect              : -----------result:++_fragments :: newblogList-------
+2020-03-14 15:16:31.423  INFO 4522 --- [http-nio-8080-exec-10] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/types/5', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.TypeShowController.types', args='[Ljava.lang.Object;@246d3f80'}
+2020-03-14 15:16:31.445  INFO 4522 --- [http-nio-8080-exec-10] com.linyue.aspect.LogAspect              : -----------result:++types-------
+2020-03-14 15:16:31.682  INFO 4522 --- [http-nio-8080-exec-10] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.newblogs', args='[Ljava.lang.Object;@1edfddb5'}
+2020-03-14 15:16:31.687  INFO 4522 --- [http-nio-8080-exec-10] com.linyue.aspect.LogAspect              : -----------result:++_fragments :: newblogList-------
+2020-03-14 15:16:37.215  INFO 4522 --- [http-nio-8080-exec-9] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/types/3', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.TypeShowController.types', args='[Ljava.lang.Object;@5e0b1e58'}
+2020-03-14 15:16:37.224  INFO 4522 --- [http-nio-8080-exec-9] com.linyue.aspect.LogAspect              : -----------result:++types-------
+2020-03-14 15:16:37.451  INFO 4522 --- [http-nio-8080-exec-6] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.newblogs', args='[Ljava.lang.Object;@2ebf8019'}
+2020-03-14 15:16:37.455  INFO 4522 --- [http-nio-8080-exec-6] com.linyue.aspect.LogAspect              : -----------result:++_fragments :: newblogList-------
+2020-03-14 15:16:39.620  INFO 4522 --- [http-nio-8080-exec-3] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/types/2', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.TypeShowController.types', args='[Ljava.lang.Object;@65d025e9'}
+2020-03-14 15:16:39.629  INFO 4522 --- [http-nio-8080-exec-3] com.linyue.aspect.LogAspect              : -----------result:++types-------
+2020-03-14 15:16:39.860  INFO 4522 --- [http-nio-8080-exec-3] com.linyue.aspect.LogAspect              : Request:{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.linyue.web.IndexController.newblogs', args='[Ljava.lang.Object;@21606408'}
+2020-03-14 15:16:39.865  INFO 4522 --- [http-nio-8080-exec-3] com.linyue.aspect.LogAspect              : -----------result:++_fragments :: newblogList-------
+2020-03-14 17:54:51.554  WARN 4522 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h12m20s327ms).
+2020-03-14 18:10:45.428  WARN 4522 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m23s734ms).
+2020-03-14 18:28:56.976  WARN 4522 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m11s548ms).
+2020-03-14 18:44:18.946  WARN 4522 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m21s970ms).
+2020-03-14 22:19:30.133  WARN 4522 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h34m41s179ms).
+2020-03-14 22:41:49.726  WARN 4522 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m49s169ms).

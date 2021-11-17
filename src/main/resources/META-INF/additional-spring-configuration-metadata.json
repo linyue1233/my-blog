@@ -4,5 +4,6 @@
       "name": "comment.avatar",
       "type": "java.lang.String",
       "description": "Description for comment.avatar."
-  }
-] }
+    }
+  ]
+}

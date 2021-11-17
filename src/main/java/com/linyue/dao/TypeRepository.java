@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface TypeRepository extends JpaRepository<Type,Long> {
+public interface TypeRepository extends JpaRepository<Type, Long> {
 
     Type findByName(String name);
 

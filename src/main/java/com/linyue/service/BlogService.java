@@ -17,23 +17,23 @@ public interface BlogService {
 
     Page<Blog> listBlog(Pageable pageable);
 
-    Page<Blog> listBlog(Long TagId,Pageable pageable);
+    Page<Blog> listBlog(Long TagId, Pageable pageable);
 
 
-    Page<Blog> listBlog(String query,Pageable pageable);
+    Page<Blog> listBlog(String query, Pageable pageable);
 
 
     List<Blog> listRecommendBlogTop(Integer size);
 
 
-    Map<String,List<Blog>> archiveBlog();
+    Map<String, List<Blog>> archiveBlog();
 
     Long countBlog();
 
 
     Blog saveBlog(Blog blog);
 
-    Blog updateBlog(Long id,Blog blog);
+    Blog updateBlog(Long id, Blog blog);
 
     void deleteBlog(Long id);
 }

@@ -201,7 +201,7 @@ public class Blog {
 
 
     public void init() {
-        this.tagIds=tagsToIds(this.getTags());
+        this.tagIds = tagsToIds(this.getTags());
     }
 
     private String tagsToIds(List<Tag> tags) {
@@ -212,12 +212,12 @@ public class Blog {
                 if (flag) {
                     ids.append(",");
                 } else {
-                    flag=true;
+                    flag = true;
                 }
                 ids.append(tag.getId());
             }
             return ids.toString();
-        }else{
+        } else {
             return tagIds;
         }
     }

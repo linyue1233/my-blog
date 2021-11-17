@@ -18,7 +18,7 @@ public class Type {
     private String name;
 
     @OneToMany(mappedBy = "type")    //被维护关系
-    private List<Blog> blogs=new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>();
 
     public Type() {
     }

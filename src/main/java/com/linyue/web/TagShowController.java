@@ -24,14 +24,14 @@ public class TagShowController {
 
     @GetMapping("/tags/{id}")
     public String tags(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
-                       @PathVariable Long id, Model model){
-        List<Tag> tags=tagService.listTagTop(10000);
-        if (id==-1){
-            id=tags.get(0).getId();
+                       @PathVariable Long id, Model model) {
+        List<Tag> tags = tagService.listTagTop(10000);
+        if (id == -1) {
+            id = tags.get(0).getId();
         }
-        model.addAttribute("tags",tags);
-        model.addAttribute("page",blogService.listBlog(id,pageable));
-        model.addAttribute("activeTagId",id);
+        model.addAttribute("tags", tags);
+        model.addAttribute("page", blogService.listBlog(id, pageable));
+        model.addAttribute("activeTagId", id);
         return "tags";
     }
 }

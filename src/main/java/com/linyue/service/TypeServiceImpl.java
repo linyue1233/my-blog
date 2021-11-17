@@ -45,19 +45,19 @@ public class TypeServiceImpl implements TypeService {
 
     @Override
     public List<Type> listTypeTop(Integer size) {
-        Sort sort=Sort.by(Sort.DEFAULT_DIRECTION,"blogs.size");
-        Pageable pageable=PageRequest.of(0,size,sort);
+        Sort sort = Sort.by(Sort.DEFAULT_DIRECTION, "blogs.size");
+        Pageable pageable = PageRequest.of(0, size, sort);
         return typeRepository.findTop(pageable);
     }
 
     @Transactional
     @Override
     public Type updateType(Long id, Type type) {
-        Type t=typeRepository.findById(id).orElse(null);
-        if (t==null){
-            throw  new NotFindException("不存在该类型");
+        Type t = typeRepository.findById(id).orElse(null);
+        if (t == null) {
+            throw new NotFindException("不存在该类型");
         }
-        BeanUtils.copyProperties(type,t);
+        BeanUtils.copyProperties(type, t);
         return typeRepository.save(t);
     }
 

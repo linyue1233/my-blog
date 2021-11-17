@@ -55,11 +55,11 @@
         </div>
         <table class="ui celled table">
             <thead>
-                <tr>
-                    <th></th>
-                    <th>名称</th>
-                    <th>操作</th>
-                </tr>
+            <tr>
+                <th></th>
+                <th>名称</th>
+                <th>操作</th>
+            </tr>
             </thead>
 
             <tbody>
@@ -67,18 +67,22 @@
                 <td th:text="${iterStat.count}">1</td>
                 <td th:text="${type.name}">刻意练习清单</td>
                 <td>
-                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">编辑</a>
-                    <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red basic button">删除</a>
+                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}"
+                       class="ui mini teal basic button">编辑</a>
+                    <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}"
+                       class="ui mini red basic button">删除</a>
                 </td>
             </tr>
             </tbody>
 
             <tfoot>
             <tr>
-                <th colspan="6" >
-                    <div  th:if="${page.totalPages}>1" class="ui mini  floated pagination menu">
-                        <a th:href="@{/admin/types(page=${page.number}-1)}" class="item" th:unless="${page.first}">上一页</a>
-                        <a th:href="@{/admin/types(page=${page.number}+1)}" class="item" th:unless="${page.last}">下一页</a>
+                <th colspan="6">
+                    <div th:if="${page.totalPages}>1" class="ui mini  floated pagination menu">
+                        <a th:href="@{/admin/types(page=${page.number}-1)}" class="item"
+                           th:unless="${page.first}">上一页</a>
+                        <a th:href="@{/admin/types(page=${page.number}+1)}" class="item"
+                           th:unless="${page.last}">下一页</a>
                     </div>
                     <a th:href="@{/admin/types/input}" class="ui mini right floated  teal basic button">新增</a>
                 </th>
@@ -137,16 +141,16 @@
     });
 
     $('.ui.dropdown').dropdown({
-        on:'hover'
+        on: 'hover'
     });
 
     //消息提示关闭初始化
     $('.message .close')
-        .on('click',function () {
-        $(this)
-            .closest('.message')
-            .transition('fade');
-    });
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 </script>
 </body>
 </html>

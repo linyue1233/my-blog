@@ -31,7 +31,7 @@
     </a>
 </nav>
 
-<div  class="m-container m-padded-tb-big animated fadeIn">
+<div class="m-container m-padded-tb-big animated fadeIn">
     <div class="ui container">
         <div class="ui stackable grid">
             <!--左边博客列表-->
@@ -43,7 +43,8 @@
                             <h3 class="ui teal header">博客</h3>
                         </div>
                         <div class="right aligned column">
-                            共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}"> 14 </h2> 篇
+                            共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">
+                            14 </h2> 篇
                         </div>
                     </div>
                 </div>
@@ -51,19 +52,24 @@
                 <!--content-->
                 <div class="ui attached  segment">
                     <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
-                        <div class="ui middle aligned mobile reversed stackable grid" >
+                        <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="eleven wide column">
-                                <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你真的理解什么是财富自由吗?</a></h3>
-                                <p class="m-text" th:text="|${blog.description}......|">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                                                         class="m-black" th:text="${blog.title}">你真的理解什么是财富自由吗?</a></h3>
+                                <p class="m-text" th:text="|${blog.description}......|">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${blog.user.avatar}}"  alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}" >林悦</a></div>
+                                                <img src="https://unsplash.it/100/100?image=1005"
+                                                     th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                                                <div class="content"><a href="#" class="header"
+                                                                        th:text="${blog.user.nickname}">林悦</a></div>
                                             </div>
                                             <div class="item">
-                                                <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2017-10-01</span>
+                                                <i class="calendar icon"></i><span
+                                                    th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2017-10-01</span>
                                             </div>
                                             <div class="item">
                                                 <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>
@@ -71,14 +77,17 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin"
+                                           th:text="${blog.type.name}">认知升级</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="five wide column">
                                 <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">
+                                    <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}"
+                                         alt="" class="ui rounded image">
                                 </a>
                             </div>
 
@@ -89,12 +98,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -106,7 +117,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -123,12 +135,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -140,7 +154,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -157,12 +172,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -174,7 +191,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -191,12 +209,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -208,7 +228,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -225,12 +246,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -242,7 +265,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -259,12 +283,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -276,7 +302,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -293,12 +320,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -310,7 +339,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -327,12 +357,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -344,7 +376,8 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
@@ -361,12 +394,14 @@
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+                                <p class="m-text">
+                                    正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
                                 <div class="ui grid">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt=""
+                                                     class="ui avatar image">
                                                 <div class="content"><a href="#" class="header">李仁密</a></div>
                                             </div>
                                             <div class="item">
@@ -378,14 +413,15 @@
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="five wide column">
                                 <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1005"  alt="" class="ui rounded image">
+                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
                                 </a>
                             </div>
 
@@ -398,10 +434,12 @@
                 <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <a href="#" th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
+                            <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}"
+                               class="ui mini teal basic button">上一页</a>
                         </div>
                         <div class="right aligned column">
-                            <a href="#" th:href="@{/(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
+                            <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}"
+                               class="ui mini teal basic button">下一页</a>
                         </div>
                     </div>
                 </div>
@@ -417,15 +455,19 @@
                                 <i class="idea icon"></i>分类
                             </div>
                             <div class="right aligned column">
-                                <a href="#" th:href="@{types/-1}" target="_blank">more<i class="angle double right icon"></i></a>
+                                <a href="#" th:href="@{types/-1}" target="_blank">more<i
+                                        class="angle double right icon"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="ui teal segment ">
-                        <div class="ui fluid vertical menu" >
-                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item" th:each="type : ${types}">
+                        <div class="ui fluid vertical menu">
+                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
+                               th:each="type : ${types}">
                                 <span th:text="${type.name}"></span>学习日志
-                                <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
+                                <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">
+                                    13
+                                </div>
                             </a>
                             <!--/*-->
                             <a href="#" class="item">
@@ -461,12 +503,15 @@
                                 <i class="tags icon"></i>标签
                             </div>
                             <div class="right aligned column">
-                                <a href="#" th:href="@{tags/-1}" target="_blank">more<i class="angle double right icon"></i></a>
+                                <a href="#" th:href="@{tags/-1}" target="_blank">more<i
+                                        class="angle double right icon"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="ui teal segment" >
-                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}"><span th:text="${tag.name}">方法论</span>
+                    <div class="ui teal segment">
+                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank"
+                           class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}"><span
+                                th:text="${tag.name}">方法论</span>
                             <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
                         </a>
 
@@ -494,7 +539,8 @@
                         <i class="bookmark icon"></i>最新推荐
                     </div>
                     <div class="ui segment" th:each="blog : ${recommendBlogs}">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin" th:text="${blog.title}">用户故事（User Story）</a>
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin"
+                           th:text="${blog.title}">用户故事（User Story）</a>
                     </div>
                     <!--/*-->
                     <div class="ui segment">
@@ -509,7 +555,8 @@
                 <!--二维码-->
                 <h4 class="ui horizontal divider header m-margin-top-large">扫码像我开炮！</h4>
                 <div class="ui centered card" style="width: 11em">
-                    <img src="../static/image/mine.jpg" th:src="@{/image/mine.jpg}" alt="" class="ui rounded image" style="width: 11em">
+                    <img src="../static/image/mine.jpg" th:src="@{/image/mine.jpg}" alt="" class="ui rounded image"
+                         style="width: 11em">
                 </div>
             </div>
         </div>
@@ -524,7 +571,8 @@
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img src="../static/image/mine.jpg" th:src="@{/image/mine.jpg}" class="ui rounded image" alt="" style="width: 110px">
+                        <img src="../static/image/mine.jpg" th:src="@{/image/mine.jpg}" class="ui rounded image" alt=""
+                             style="width: 110px">
                     </div>
                 </div>
             </div>
@@ -556,8 +604,8 @@
 </footer>
 
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--/*/</th:block >/*/-->
 
 <script>

@@ -26,23 +26,23 @@ public class CommentController {
     private String avatar;
 
     @GetMapping("/comments/{blogId}")
-    public String comments(@PathVariable Long blogId, Model model){
-        model.addAttribute("comments",commentService.listCommentByBlogId(blogId));
+    public String comments(@PathVariable Long blogId, Model model) {
+        model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
         return "blog :: commentList";
     }
 
     @PostMapping("/comments")
-    public String post(Comment comment, HttpSession session){
-        Long blogId=comment.getBlog().getId();
-        User user=(User) session.getAttribute("user");
+    public String post(Comment comment, HttpSession session) {
+        Long blogId = comment.getBlog().getId();
+        User user = (User) session.getAttribute("user");
         comment.setBlog(blogService.getBlog(blogId));
-        if (user!=null){
+        if (user != null) {
             comment.setAvatar(user.getAvatar());
             comment.setAdminComment(true);
-        }else {
+        } else {
             comment.setAvatar(avatar);
         }
         commentService.saveComment(comment);
-        return "redirect:/comments/"+comment.getBlog().getId();
+        return "redirect:/comments/" + comment.getBlog().getId();
     }
 }

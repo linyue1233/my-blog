@@ -43,7 +43,8 @@
                     <div class="ui header">关于我</div>
                 </div>
                 <div class="ui attached segment">
-                    <p class="m-text">林悦，一名常熟理工在校大学生，专业为计算机科学与技术，喜欢打羽毛球，与妹子发抛，常年占据LOL峡谷之巅第一名，被人称为3-209大C！当然他最喜欢的就是学习，因为学习使他快乐！！！</p>
+                    <p class="m-text">
+                        林悦，一名常熟理工在校大学生，专业为计算机科学与技术，喜欢打羽毛球，与妹子发抛，常年占据LOL峡谷之巅第一名，被人称为3-209大C！当然他最喜欢的就是学习，因为学习使他快乐！！！</p>
                     <p class="m-text">热爱编程，喜欢运动旅游交友，更喜欢发抛</p>
                 </div>
                 <div class="ui attached segment">
@@ -60,13 +61,16 @@
                     <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
                 </div>
                 <div class="ui bottom attached segment">
-                    <a href="https://gitee.com/linyue123" class="ui circular icon button"><i class="github icon"></i></a>
+                    <a href="https://gitee.com/linyue123" class="ui circular icon button"><i
+                            class="github icon"></i></a>
                     <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-                    <a href="#" class="ui qq circular icon button" data-content="1191609469" data-position="bottom center"><i class="qq icon"></i></a>
+                    <a href="#" class="ui qq circular icon button" data-content="1191609469"
+                       data-position="bottom center"><i class="qq icon"></i></a>
                 </div>
 
                 <div class="ui wechatQR flowing popup transition hidden">
-                    <img src="../../static/image/mine.jpg" th:src="@{/image/mine.jpg}" alt="" class="ui rounded image" style="width: 100px">
+                    <img src="../../static/image/mine.jpg" th:src="@{/image/mine.jpg}" alt="" class="ui rounded image"
+                         style="width: 100px">
                 </div>
             </div>
         </div>
@@ -125,8 +129,8 @@
     $('.qq').popup();
 
     $('.wechat').popup({
-        popup:$('.wechatQR'),
-        position:'bottom center'
+        popup: $('.wechatQR'),
+        position: 'bottom center'
     });
 
 </script>

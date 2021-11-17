@@ -26,16 +26,16 @@ public class TypeShowController {
 
     @GetMapping("/types/{id}")
     public String types(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
-                        @PathVariable Long id, Model model){
-        List<Type> types=typeService.listTypeTop(10000);
-        if (id==-1){
-            id=types.get(0).getId();
+                        @PathVariable Long id, Model model) {
+        List<Type> types = typeService.listTypeTop(10000);
+        if (id == -1) {
+            id = types.get(0).getId();
         }
-        BlogQuery blogQuery=new BlogQuery();
+        BlogQuery blogQuery = new BlogQuery();
         blogQuery.setTypeId(id);
-        model.addAttribute("types",types);
-        model.addAttribute("page",blogService.listBlog(pageable,blogQuery));
-        model.addAttribute("activeTypeId",id);
+        model.addAttribute("types", types);
+        model.addAttribute("page", blogService.listBlog(pageable, blogQuery));
+        model.addAttribute("activeTypeId", id);
         return "types";
     }
 }

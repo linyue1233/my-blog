@@ -1,7 +1,6 @@
 package com.linyue.entity;
 
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,7 +16,7 @@ public class Tag {
     private String name;
 
     @ManyToMany(mappedBy = "tags")
-    private List<Blog> blogs=new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>();
 
     public Tag() {
     }

@@ -50,7 +50,7 @@
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <form id="blog-form" action="#" th:object="${blog}" th:action="@{/admin/blogs}" method="post" class="ui form">
-            <input type="hidden" name="published" >
+            <input type="hidden" name="published">
             <input type="hidden" name="id" th:value="*{id}">
             <div class="required field">
                 <div class="ui left labeled input">
@@ -70,7 +70,7 @@
 
             <div class="required field">
                 <div id="md-content" style="z-index: 1 !important;">
-                    <textarea placeholder="博客内容" name="content" style="display: none" th:text="*{content}" ></textarea>
+                    <textarea placeholder="博客内容" name="content" style="display: none" th:text="*{content}"></textarea>
                 </div>
             </div>
 
@@ -83,7 +83,9 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">分类</div>
                             <div class="menu">
-                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">错误日志</div>
+                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}"
+                                     th:text="${type.name}">错误日志
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -96,7 +98,9 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">标签</div>
                             <div class="menu">
-                                <div th:each="tag : ${tags}"  class="item" data-value="1" th:data-value="${tag.id}" th:text="${tag.name}">java</div>
+                                <div th:each="tag : ${tags}" class="item" data-value="1" th:data-value="${tag.id}"
+                                     th:text="${tag.name}">java
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,25 +121,29 @@
             <div class="inline fields">
                 <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend" checked  th:check="*{recommend}" class="hidden">
+                        <input type="checkbox" id="recommend" name="recommend" checked th:check="*{recommend}"
+                               class="hidden">
                         <label for="recommend">推荐</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" id="shareStatement" name="shareStatement" th:check="*{shareStatement}" class="hidden">
+                        <input type="checkbox" id="shareStatement" name="shareStatement" th:check="*{shareStatement}"
+                               class="hidden">
                         <label for="shareStatement">转载声明</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" id="appreciation" name="appreciation" th:check="*{appreciation}" class="hidden">
+                        <input type="checkbox" id="appreciation" name="appreciation" th:check="*{appreciation}"
+                               class="hidden">
                         <label for="appreciation">赞赏</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
-                        <input type="checkbox" id="commentabled" name="commentabled" th:check="*{commentabled}" class="hidden">
+                        <input type="checkbox" id="commentabled" name="commentabled" th:check="*{commentabled}"
+                               class="hidden">
                         <label for="commentabled">评论打开</label>
                     </div>
                 </div>
@@ -200,13 +208,13 @@
 
     //初始化Markdown编译器
     var contentEditor;
-    $(function() {
+    $(function () {
         contentEditor = editormd("md-content", {
-            width   : "100%",
-            height  : 640,
-            syncScrolling : "single",
+            width: "100%",
+            height: 640,
+            syncScrolling: "single",
 //        path    : "../static/lib/editormd/lib/"
-            path    : "/lib/editormd/lib/"
+            path: "/lib/editormd/lib/"
         });
     });
 
@@ -230,48 +238,48 @@
     });
 
     $('.ui.form').form({
-       fields:{
-           title:{
-               identifier:'title',
-               rules:[{
-                   type:'empty',
-                   prompt:'标题：请输入博客标题'
-               }]
-           },
-           content :{
-               identifier:'content',
-               rules:[{
-                   type:'empty',
-                   prompt:'标题：请输入博客内容'
-               }]
-           },
-           typeId: {
-               identifier:'typeId',
-               rules:[{
-                   type:'empty',
-                   prompt:'标题：请输入博客分类'
-               }]
-           },
-           firstPicture: {
-               identifier:'firstPicture',
-               rules:[{
-                   type:'empty',
-                   prompt:'标题：请输入博客首图'
-               }]
-           },
-           description:{
-               identifier:'description',
-               rules:[{
-                   type:'empty',
-                   prompt:'标题：请输入博客描述'
-               }]
-           },
-       }
+        fields: {
+            title: {
+                identifier: 'title',
+                rules: [{
+                    type: 'empty',
+                    prompt: '标题：请输入博客标题'
+                }]
+            },
+            content: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: '标题：请输入博客内容'
+                }]
+            },
+            typeId: {
+                identifier: 'typeId',
+                rules: [{
+                    type: 'empty',
+                    prompt: '标题：请输入博客分类'
+                }]
+            },
+            firstPicture: {
+                identifier: 'firstPicture',
+                rules: [{
+                    type: 'empty',
+                    prompt: '标题：请输入博客首图'
+                }]
+            },
+            description: {
+                identifier: 'description',
+                rules: [{
+                    type: 'empty',
+                    prompt: '标题：请输入博客描述'
+                }]
+            },
+        }
     });
 
     $('.ui.tag.dropdown').dropdown(
         {
-            allowAdditions:true
+            allowAdditions: true
         });
 </script>
 </body>

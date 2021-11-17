@@ -34,13 +34,13 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
-        Blog blog=blogRepository.findById(id).orElse(null);
-        if (blog==null){
+        Blog blog = blogRepository.findById(id).orElse(null);
+        if (blog == null) {
             throw new NotFindException("该博客不存在");
         }
-        Blog b=new Blog();
-        BeanUtils.copyProperties(blog,b);
-        String content=b.getContent();
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog, b);
+        String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
         blogRepository.updateViews(id);
         return b;
@@ -51,10 +51,10 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
-                Join join=root.join("tags");
-                return criteriaBuilder.equal(join.get("id"),tagId);
+                Join join = root.join("tags");
+                return criteriaBuilder.equal(join.get("id"), tagId);
             }
-        },pageable);
+        }, pageable);
     }
 
     @Override
@@ -62,20 +62,20 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
-                List<Predicate> predicates=new ArrayList<>();
-                if (!"".equals(blog.getTitle()) && blog.getTitle()!=null){
-                    predicates.add(criteriaBuilder.like(root.<String>get("title"),"%"+blog.getTitle()+"%"));
+                List<Predicate> predicates = new ArrayList<>();
+                if (!"".equals(blog.getTitle()) && blog.getTitle() != null) {
+                    predicates.add(criteriaBuilder.like(root.<String>get("title"), "%" + blog.getTitle() + "%"));
                 }
-                if (blog.getTypeId()!=null){
-                    predicates.add(criteriaBuilder.equal(root.<Type>get("type").get("id"),blog.getTypeId()));
+                if (blog.getTypeId() != null) {
+                    predicates.add(criteriaBuilder.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
                 }
-                if (blog.isRecommend()){
-                    predicates.add(criteriaBuilder.equal(root.<Boolean>get("recommend"),blog.isRecommend()));
+                if (blog.isRecommend()) {
+                    predicates.add(criteriaBuilder.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
                 }
                 criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()]));
                 return null;
             }
-        },pageable);
+        }, pageable);
     }
 
     @Override
@@ -85,24 +85,24 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Page<Blog> listBlog(String query, Pageable pageable) {
-        return blogRepository.findByQuery(query,pageable);
+        return blogRepository.findByQuery(query, pageable);
     }
 
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
-        Sort sort=Sort.by(Sort.DEFAULT_DIRECTION,"updateTime");
-        Pageable pageable= PageRequest.of(0,size,sort);
+        Sort sort = Sort.by(Sort.DEFAULT_DIRECTION, "updateTime");
+        Pageable pageable = PageRequest.of(0, size, sort);
         return blogRepository.findTop(pageable);
     }
 
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
-        if (blog.getId()==null) {
+        if (blog.getId() == null) {
             blog.setCreatTime(new Date());
             blog.setUpdateTime(new Date());
             blog.setViews(0);
-        }else {
+        } else {
             blog.setUpdateTime(new Date());
         }
         return blogRepository.save(blog);
@@ -111,21 +111,21 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
-        Blog b=blogRepository.findById(id).orElse(null);
-        if (b==null){
+        Blog b = blogRepository.findById(id).orElse(null);
+        if (b == null) {
             throw new NotFindException("该博客不存在");
         }
-        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));  //将blog 给b
+        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));  //将blog 给b
         return blogRepository.save(b);
     }
 
 
     @Override
     public Map<String, List<Blog>> archiveBlog() {
-        List<String> years=blogRepository.findGroupYear();
-        Map<String,List<Blog>> map=new HashMap<>();
-        for(String year : years){
-            map.put(year,blogRepository.findByYear(year));
+        List<String> years = blogRepository.findGroupYear();
+        Map<String, List<Blog>> map = new HashMap<>();
+        for (String year : years) {
+            map.put(year, blogRepository.findByYear(year));
         }
         return map;
     }

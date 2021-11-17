@@ -23,7 +23,8 @@ public class User {
     private Date updateTime;
 
     @OneToMany(mappedBy = "user")
-    private List<Blog> blogs=new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>();
+
     public User() {
     }
 

@@ -18,17 +18,17 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice  //注解意思：拦截所有controller注解控制器
 public class ControllerExceptionHandler {
 
-    private final Logger logger=LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @ExceptionHandler(Exception.class)
-    public ModelAndView exceptionHandler(HttpServletRequest request,Exception e) throws Exception {
-        logger.error("Request URL :{},Exception: {}",request.getRequestURI(),e);
-        if(AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class)!=null){
+    public ModelAndView exceptionHandler(HttpServletRequest request, Exception e) throws Exception {
+        logger.error("Request URL :{},Exception: {}", request.getRequestURI(), e);
+        if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
             throw e;
         }
-        ModelAndView mv=new ModelAndView();
-        mv.addObject("url",request.getRequestURI());
-        mv.addObject("exception",e);
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("url", request.getRequestURI());
+        mv.addObject("exception", e);
         mv.setViewName("error/error");
         return mv;
     }
